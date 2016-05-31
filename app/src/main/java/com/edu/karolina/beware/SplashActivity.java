@@ -2,6 +2,7 @@ package com.edu.karolina.beware;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -18,27 +19,34 @@ public class SplashActivity extends AppCompatActivity {
     private Context mContext;
 
     public final int SPLASH_TIME = 700;
+    SharedPreferences sharedPreferences;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-
+        final Boolean isLoged;
+        sharedPreferences = getSharedPreferences("PREFERENCIAS_BEWARE",MODE_PRIVATE);
+        isLoged =  sharedPreferences.getBoolean("IS_LOGED",false);
         mContext = this;
-
         runnable = new Runnable() {
 
             @Override
             public void run() {
                 // TODO Auto-generated method stub
 
-
-                Intent nextActivity = new Intent(mContext, InicioSeccionActivity.class);
-
-                startActivity(nextActivity);
-                finish();
+                if (isLoged == false) {
+                    Intent nextActivity = new Intent(mContext, InicioSeccionActivity.class);
+                    startActivity(nextActivity);
+                    finish();
+                }
+                else {
+                    Intent nextAtivity = new Intent(mContext, MenuActivity.class);
+                    startActivity(nextAtivity);
+                    finish();
+                }
             }
         };
 

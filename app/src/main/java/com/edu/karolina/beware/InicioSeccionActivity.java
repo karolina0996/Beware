@@ -3,6 +3,7 @@ package com.edu.karolina.beware;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,11 +16,15 @@ import com.edu.karolina.beware.model.adapter.UserDbAdapter;
 public class InicioSeccionActivity extends Activity {
 
     private UserDbAdapter userDbAdapter;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_seccion);
+        sharedPreferences = getSharedPreferences("PREFERENCIAS_BEWARE",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         userDbAdapter = new UserDbAdapter(this);
         userDbAdapter.open();
@@ -47,12 +52,19 @@ public class InicioSeccionActivity extends Activity {
                 float masa = Float.parseFloat(micursor.getString(7));
 
                 if (pass.equals(((EditText) findViewById(R.id.editText2)).getText().toString())) {
+                    editor.putBoolean("IS_LOGED",true);
+                    editor.putLong("ID",iduser);
+                    editor.putFloat("edad3",edad);
+                    editor.putFloat("altura3", altura);
+                    editor.putFloat("masa3",masa);
 
+                    editor.commit();
                     Intent nextActivity = new Intent(this, MenuActivity.class);
-                    nextActivity.putExtra("iduser", iduser);
+                   /* nextActivity.putExtra("iduser", iduser);
                     nextActivity.putExtra("edad1", edad);
                     nextActivity.putExtra("altura1", altura);
                     nextActivity.putExtra("masa1", masa);
+                    */
                     startActivity(nextActivity);
                     finish();
 

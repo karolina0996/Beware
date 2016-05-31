@@ -1,6 +1,7 @@
 package com.edu.karolina.beware;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,21 +9,29 @@ import android.widget.TextView;
 
 public class MenuActivity extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences;
 
-        @Override
+
+    float edad2;
+    float masa2;
+    float altura2;
+    long iduser;
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_menu);
-
+            sharedPreferences = getSharedPreferences("PREFERENCIAS_BEWARE",MODE_PRIVATE);
+            iduser = sharedPreferences.getLong("ID",0);
             Bundle bundle = getIntent().getExtras();
-            float año = bundle.getFloat("año");
+            /*float año = bundle.getFloat("año");
             float mes = bundle.getFloat("mes");
             float dia = bundle.getFloat("dia");
+*/
 
-
-            float edad2 = bundle.getFloat("edad1");
-            float masa2 = bundle.getFloat("masa1");
-            float altura2 = bundle.getFloat("altura1");
+            edad2 = sharedPreferences.getFloat("edad3",0);
+            masa2 = sharedPreferences.getFloat("masa3",0);
+            altura2 = sharedPreferences.getFloat("altura3",0);
             float imc = (masa2 / ((altura2 / 100) * (altura2 / 100)));
 
             String a = Float.toString(imc);
@@ -45,7 +54,7 @@ public class MenuActivity extends AppCompatActivity {
                 txtCambiado3.setText("CALORIAS SUGERIDAS:\r\n                "+cal2);
             } else if (imc > 40) {
                 TextView txtCambiado2 = (TextView) findViewById(R.id.textView4);
-                txtCambiado2.setText("ESTADO:\r\nObesidad m�rbida");
+                txtCambiado2.setText("ESTADO:\r\nObesidad morbida");
 
                 TextView txtCambiado3 = (TextView) findViewById(R.id.textView2);
                 txtCambiado3.setText("CALORIAS SUGERIDAS:\r\n                "+cal1);
@@ -78,13 +87,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         public void Clicked1(View v) {
-            Bundle bundle = getIntent().getExtras();
-            float edad2 = bundle.getFloat("año");
-            float masa2 = bundle.getFloat("mes");
-            float altura2 = bundle.getFloat("dia");
-
             Intent nextActivity = new Intent(this, com.edu.karolina.beware.PesoQueDeseoActivity.class);
-
             nextActivity.putExtra("edad3", edad2);
             nextActivity.putExtra("altura3", altura2);
             nextActivity.putExtra("masa3", masa2);
@@ -95,10 +98,8 @@ public class MenuActivity extends AppCompatActivity {
 
         public void Clicked2(View v) {
             Bundle bundle = getIntent().getExtras();
-            float edad2 = bundle.getFloat("edad1");
-            float masa2 = bundle.getFloat("masa1");
-            float altura2 = bundle.getFloat("altura1");
-            int iduser = bundle.getInt("iduser");
+
+
 
             Intent nextActivity = new Intent(this, com.edu.karolina.beware.CambieDePesoActivity.class);
             nextActivity.putExtra("iduser", iduser);
@@ -110,10 +111,7 @@ public class MenuActivity extends AppCompatActivity {
         }
 
         public void Clicked3(View v) {
-            Bundle bundle = getIntent().getExtras();
-            float edad2 = bundle.getFloat("edad1");
-            float masa2 = bundle.getFloat("masa1");
-            float altura2 = bundle.getFloat("altura1");
+
 
             float imc = (masa2 / ((altura2 / 100) * (altura2 / 100)));
             double calorias = (66.473 + (13.752 * masa2) + (5.0033 * altura2) - (6.755 * edad2)) * 1.375;

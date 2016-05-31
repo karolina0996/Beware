@@ -31,7 +31,7 @@ public class RegistroActivity extends AppCompatActivity {
         }
 
         private boolean validateForm(){
-            boolean result = false;
+            boolean result = true;
 
             EditText etName = (EditText) findViewById(R.id.editText1);
 
@@ -84,7 +84,7 @@ public class RegistroActivity extends AppCompatActivity {
                     finish();
                 } else {
 
-                    Log.w(TAG, "Error de insertar");
+                    Log.i("LOGIN", "Error de insertar");
                     Toast.makeText(this, "Error al crear el usuario", Toast.LENGTH_LONG).show();
                 }
             } else {
@@ -107,4 +107,4 @@ public class RegistroActivity extends AppCompatActivity {
 
 
 
-    }
+  }
