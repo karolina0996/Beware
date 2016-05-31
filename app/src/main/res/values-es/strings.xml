@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Cuidate</string>
+    <string name="cambie_de_peso">cambie_de_peso</string>
+    <string name="title_cambie_de_peso">tituo_cambie_de_peso</string>
+    <string name="asi_vas_con_tu_peso">asi_vas_con_tu_peso</string>
+    <string name="mi_nuevo_peso">mi_nuevo_peso</string>
+    <string name="hint_peso">hint_peso</string>
+    <string name="titlecambie_de_peso">CAMBIE DE PESO!!!</string>
+    <string name="hintpeso">peso</string>
+    <string name="minuevo_peso">mi nuevo peso</string>
+    <string name="asivas_con_tu_peso">asi vas con tu peso</string>
+    <string name="password">password</string>
+    <string name="passw">Contraseña</string>
+    <string name="puntos_password">Digita</string>
+    <string name="crear_cuenta">Crear</string>
+    <string name="hint_user">Escribe Tu Usuario</string>
+    <string name="user">Usuario</string>
+    <string name="iniciar_sesion">iniciar sesion</string>
+    <string name="title_inicio">INICIAR SESION</string>
+    <string name="boton_cambie_de_peso">Cambie DE Peso</string>
+    <string name="boton_que_comi_hoy">Registro Comida</string>
+    <string name="boton_el_peso_que_deseo">El Peso Que Deseo</string>
+    <string name="title_menu">Menu Principal</string>
+    <string name="imc">Imc</string>
+    <string name="estado">Estado</string>
+    <string name="calorias_sugeridas">Calorias Sugeridas</string>
+    <string name="dias_para_lograrlo">Dias Para Lograrlo</string>
+    <string name="dias">Dias</string>
+    <string name="el_peso_que_deseo">EL PESO QUE DESEO</string>
+    <string name="title_splash">BEWARE</string>
+    <string name="title_quecomihoy">Registro Comida</string>
+    <string name="carne_de_res">Carne Res</string>
+    <string name="pescado">Pescado</string>
+    <string name="pollo">Pollo</string>
+    <string name="carne_de_cerdo">Carne Cerdo</string>
+    <string name="arroz">Arroz</string>
+    <string name="frijol">Frijol</string>
+    <string name="pasta">Pasta</string>
+    <string name="lenteja">Lenteja</string>
+    <string name="huevo">Huevo</string>
+    <string name="manzana">Manzana</string>
+    <string name="papa">Papa</string>
+    <string name="banano">Banano</string>
+    <string name="mango">Mango</string>
+    <string name="pera">Pera</string>
+    <string name="leche">Leche</string>
+    <string name="cafe">Cafe</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="tomate">Tomate</string>
+    <string name="error_form" />
+</resources>

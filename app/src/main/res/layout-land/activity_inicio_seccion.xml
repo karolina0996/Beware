@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bici3"
+    >
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="@dimen/top40"
+        android:text="@string/passw"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/text30"
+        android:textStyle="bold" />
+
+    <EditText
+        android:textColor="#000000"
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="@dimen/top20"
+        android:ems="10"
+        android:hint="@string/puntos_password"
+        android:inputType="textPassword" />
+
+    <Button
+
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/top40"
+        android:background="#00000000"
+        android:onClick="registerClickedinicio"
+        android:text="@string/crear_cuenta"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="@dimen/top26"
+        android:ems="10"
+        android:hint="@string/hint_user" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/top26"
+        android:layout_marginTop="@dimen/top101"
+        android:text="@string/user"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/text30"
+        android:textStyle="bold" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="@dimen/top26"
+        android:onClick="registerClickedlogin"
+        android:text="@string/iniciar_sesion" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top30"
+        android:text="@string/title_inicio"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/text30"
+        android:textStyle="bold" />
+
+</RelativeLayout>

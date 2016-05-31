@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo6"
+    >
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="15dp"
+        android:text="@string/boton_el_peso_que_deseo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top62"
+        android:onClick="Clickedcalorias"
+        android:text="@string/calorias_sugeridas" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="@dimen/top28"
+        android:text="@string/dias_para_lograrlo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="@dimen/left20"
+        android:layout_toRightOf="@+id/textView3"
+        android:ems="5"
+        android:hint="@string/hint_peso"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/editText1"
+        android:ems="5"
+        android:hint="@string/dias"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/top10"
+        android:text="@string/el_peso_que_deseo"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/text30"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:textColor="#0000FF"
+        android:textSize="@dimen/text23"
+        android:textStyle="bold" />
+
+</RelativeLayout>
